@@ -6,6 +6,7 @@
   font-style: normal;
   font-variation-settings:
     "wdth" 100;
+    
 }
 
 /* Shared style */
@@ -62,8 +63,10 @@
 .header{
     background-image: url(../images/developer.png), url(../images/header_bg.png);
     background-repeat: no-repeat;
+    
     margin-left: 10px;
     background-position: top left, bottom right ;
+    border: 2px solid black;
 }
 
 /* Nav css */
@@ -327,4 +330,26 @@ footer{
     .about{
         padding: 20px;
     }
+}
+/* Media query for medium device */
+
+@media screen and (min-width:576px) and (max-width:992px) {
+    .banner, nav > ul,.about-items,.connect-containers
+    {
+        flex-direction: column;
+    }
+    .skills-container{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    }
+    .connect-content{
+        padding: 5px;
+    }
+    .msg-class,.text-class{
+        width: 100%;
+        padding: 0px;
+      
+    }
+
+    
 }
